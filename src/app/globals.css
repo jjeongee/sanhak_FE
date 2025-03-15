@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'pretendard';
+    src: url('../../public/asset/fonts/PretendardVariable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans-Bold';
+    src: url('../../public/asset/fonts/GmarketSansTTFBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans-Medium';
+    src: url('../../public/asset/fonts/GmarketSansTTFMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans-Light';
+    src: url('../../public/asset/fonts/GmarketSansTTFLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica-Black';
+    src: url('../../public/asset/fonts/Helvetica Condensed Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('../../public/asset/fonts/Helvetica Condensed Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+    font-family: 'GmarketSans-Medium', Arial, sans-serif;
+  }
+}
+
+@layer components {
+    .scrollbar {
+      scrollbar-width: thin; 
+      scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0); 
+      border-radius: 10px;
+    }
+
+    .scrollbar-none {
+      scrollbar-width: none; 
+    }
+  
+    /* Webkit 기반 브라우저 (Chrome, Safari) */
+    .scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.5); 
+      border-radius: 10px; 
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* slick-carousel 라이브러리 관련 커스텀 css */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+.slick-slide > div {
+  /* cursor: pointer; */
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-next:before { 
+  color: #3D3D4E;
+  font-size: 20px;
+  position: relative;
+  right: 10px;
+}
+
+.slick-prev:before { 
+  color: #3D3D4E;
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+}
