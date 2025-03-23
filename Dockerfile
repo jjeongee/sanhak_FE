@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 #작업디렉토리로 이동한다
 WORKDIR src/app
