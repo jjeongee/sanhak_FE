@@ -32,8 +32,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: jjeongee/sanhak_fe:latest
 
       - name: webhook call to server
         run: curl -I http://<ec2 퍼블릭 IPv4 DNS>:9000/hooks/deploy
