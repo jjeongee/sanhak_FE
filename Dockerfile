@@ -7,7 +7,6 @@ WORKDIR src/app
 COPY package.json yarn.lock ./
 
 #패키지 설치
-RUN npm install -g yarn
 RUN yarn install
 
 #소스코드 복사
