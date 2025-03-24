@@ -24,7 +24,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: <image name>
+          images: jjeongee/sanhak_fe:latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
@@ -35,4 +35,4 @@ jobs:
           tags: jjeongee/sanhak_fe:latest
 
       - name: webhook call to server
-        run: curl -I http://<ec2 퍼블릭 IPv4 DNS>:9000/hooks/deploy
+        run: curl -I http://52.78.81.66:9000/hooks/deploy
