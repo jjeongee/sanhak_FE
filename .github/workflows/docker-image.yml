@@ -36,3 +36,6 @@ jobs:
 
       - name: webhook call to server
         run: curl -I http://52.78.81.66:9000/hooks/deploy
+
+      - name: Check Next.js on port 3000
+        run: curl -I http://52.78.81.66:3000
