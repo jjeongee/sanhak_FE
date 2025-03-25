@@ -3,7 +3,6 @@ FROM node:20-alpine
 #작업디렉토리로 이동한다
 WORKDIR src/app
 
-COPY .env.local ./
 
 #의존성 설치를 위한 파일들을 복사한다
 COPY package.json yarn.lock ./
