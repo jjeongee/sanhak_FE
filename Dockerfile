@@ -4,6 +4,7 @@ FROM node:20-alpine
 WORKDIR src/app
 
 
+#git action 자동배포
 #의존성 설치를 위한 파일들을 복사한다
 COPY package.json yarn.lock ./
 
